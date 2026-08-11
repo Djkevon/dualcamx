@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy · Dual Camera Target 3X</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #f8faff;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .policy-container {
+      max-width: 900px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 20px 40px -12px rgba(0, 20, 40, 0.15);
+      padding: 2.5rem 2rem;
+      transition: all 0.2s;
+    }
+    @media (max-width: 550px) {
+      .policy-container {
+        padding: 1.5rem 1.2rem;
+      }
+    }
+    .lang-toggle {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .lang-btn {
+      background: transparent;
+      border: 1.5px solid #d0d9e8;
+      padding: 0.6rem 1.6rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #1f2a44;
+      cursor: pointer;
+      transition: 0.2s;
+      background: #f2f6fe;
+      letter-spacing: 0.3px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+    .lang-btn:hover {
+      background: #e6edfa;
+      border-color: #3a5f8b;
+      transform: scale(1.01);
+    }
+    .lang-btn.active {
+      background: #1f2a44;
+      border-color: #1f2a44;
+      color: white;
+      box-shadow: 0 4px 8px rgba(26, 45, 80, 0.15);
+    }
+    .policy-content {
+      transition: opacity 0.15s ease;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0b1a33;
+      margin: 0 0 0.3rem 0;
+      border-left: 6px solid #1f2a44;
+      padding-left: 1.2rem;
+    }
+    .last-updated {
+      color: #4a5b7a;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      padding-left: 1.8rem;
+      font-weight: 400;
+    }
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+      color: #12203e;
+      border-bottom: 2px solid #eef3fc;
+      padding-bottom: 0.3rem;
+    }
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.6rem 0;
+      color: #1f2f50;
+    }
+    h4 {
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin: 1.2rem 0 0.2rem 0;
+      color: #1f2f50;
+    }
+    p, li {
+      line-height: 1.6;
+      color: #1f2a3e;
+      margin-bottom: 0.6rem;
+    }
+    ul, ol {
+      padding-left: 1.6rem;
+      margin: 0.8rem 0 1.2rem 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    strong {
+      color: #0b1a33;
+    }
+    a {
+      color: #1d4c8f;
+      text-decoration: none;
+      border-bottom: 1px dotted #b4c8e5;
+    }
+    a:hover {
+      border-bottom: 2px solid #1d4c8f;
+    }
+    .policy-content .chinese-section {
+      display: none;
+    }
+    .policy-content.show-chinese .english-section {
+      display: none;
+    }
+    .policy-content.show-chinese .chinese-section {
+      display: block;
+    }
+    hr {
+      margin: 2rem 0 1.5rem 0;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(90deg, #dbe2ef, transparent);
+    }
+    .footer-note {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #4f6183;
+      background: #f4f8ff;
+      padding: 0.8rem 1.4rem;
+      border-radius: 40px;
+      display: inline-block;
+    }
+    .badge {
+      background: #eef3fc;
+      border-radius: 30px;
+      padding: 0.2rem 0.9rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #1d2f4e;
+    }
+    @media (max-width: 480px) {
+      .lang-toggle {
+        justify-content: center;
+      }
+      h1 {
+        font-size: 1.7rem;
+        padding-left: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="policy-container">
+  <!-- language toggle buttons -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEnglish" onclick="switchLang('en')">🇬🇧 English</button>
+    <button class="lang-btn" id="btnChinese" onclick="switchLang('zh')">🇨🇳 中文 (Chinese)</button>
+  </div>
+
+  <!-- policy content wrapper -->
+  <div class="policy-content" id="policyContent">
+    <!-- ========== ENGLISH SECTION ========== -->
+    <div class="english-section">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: August 10, 2026</p>
+      <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+      <p>We use Your Personal Data to provide and improve the Service. We collect, use, and disclose Your information as described in this Privacy Policy and, where required by applicable law, only where We have a valid legal basis to do so, including Your consent (where consent is required). This Privacy Policy has been created with the help of the <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">Privacy Policy Generator</a>.</p>
+      
+      <h2>Interpretation and Definitions</h2>
+      <h3>Interpretation</h3>
+      <p>The words whose initial letters are capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+      <h3>Definitions</h3>
+      <ul>
+        <li><strong>Account</strong> means a unique account created for You to access Our Service or parts of Our Service.</li>
+        <li><strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
+        <li><strong>Application</strong> refers to Dual Camera Target 3X, the software program provided by the Company.</li>
+        <li><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Privacy Policy) refers to BS Enterprise Guyana, Lot 83 Edward Street Rosignol Village West Bank Berbice.</li>
+        <li><strong>Country/State</strong> refers to: Guyana.</li>
+        <li><strong>Device</strong> means any device that can access the Service, such as a computer, a cell phone or a digital tablet.</li>
+        <li><strong>Personal Data</strong> (or &quot;Personal Information&quot;) is any information that relates to an identified or identifiable individual. We use &quot;Personal Data&quot; and &quot;Personal Information&quot; interchangeably unless a law uses a specific term.</li>
+        <li><strong>Service</strong> refers to the Application.</li>
+        <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
+        <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
+        <li><strong>User</strong> means any individual who accesses or uses the Service.</li>
+        <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+      </ul>
+
+      <h2>Collecting and Using Your Personal Information</h2>
+      <h3>Types of Data Collected</h3>
+      <h4>Personal Data</h4>
+      <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+      <h4>Usage Data</h4>
+      <p>Usage Data is collected automatically when using the Service. Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of Our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+      <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device's unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
+      <h4>Tracking Technologies and Cookies</h4>
+      <p>We use tracking technologies (such as cookies) to track the activity and to improve Our Service. The technologies We use may include:</p>
+
+      <h3>Use of Your Personal Data</h3>
+      <p>The Company may use Personal Data for the following purposes:</p>
+      <ul>
+        <li><strong>To provide and maintain Our Service</strong>, including to monitor the usage of Our Service.</li>
+        <li><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</li>
+        <li><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</li>
+        <li><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</li>
+        <li><strong>To provide You</strong> with news, special offers, and general information about other goods, services and events which We offer that are similar to those that You have already purchased or inquired about. We send such marketing communications only where permitted by applicable law: where prior consent is required (for example, under the laws applicable in the EEA and the UK), We will send them only with Your consent; otherwise, We may send them until You opt out. You may opt out or withdraw Your consent at any time by using the unsubscribe link in any marketing email We send or by contacting Us.</li>
+        <li><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</li>
+        <li><strong>For business transfers:</strong> We may use Your Personal Data to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about Our Service users is among the assets transferred.</li>
+        <li><strong>For other purposes</strong>: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of Our promotional campaigns, and evaluating and improving Our Service, products, services, marketing and Your experience.</li>
+      </ul>
+      <p>We may share Your Personal Data in the following situations:</p>
+      <ul>
+        <li><strong>With Service Providers:</strong> We may share Your Personal Data with Service Providers to monitor and analyze the use of Our Service, and to contact You.</li>
+        <li><strong>For business transfers:</strong> We may share or transfer Your Personal Data in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
+        <li><strong>With Affiliates:</strong> We may share Your Personal Data with Our affiliates, in which case We will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
+        <li><strong>With other users:</strong> If Our Service offers public areas, when You share Personal Data or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside the Service.</li>
+        <li><strong>With Your consent</strong>: We may disclose Your Personal Data for any other purpose with Your consent.</li>
+      </ul>
+
+      <h3>Retention of Your Personal Data</h3>
+      <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with Our legal obligations (for example, if We are required to retain Your data to comply with applicable laws), resolve disputes, and enforce Our legal agreements and policies.</p>
+      <p>Where possible, We apply shorter retention periods and/or reduce identifiability by deleting, aggregating, or anonymizing data. Unless otherwise stated, the retention periods below are maximum periods (&quot;up to&quot;) and We may delete or anonymize data sooner when it is no longer needed for the relevant purpose. We apply different retention periods to different categories of Personal Data based on the purpose of processing and legal obligations:</p>
+      <ul>
+        <li><strong>Account Information</strong> – User Accounts: retained for the duration of Your Account relationship plus up to 24 months after account closure to handle any post-termination issues or resolve disputes.</li>
+        <li><strong>Usage Data</strong> – Application usage statistics: up to 24 months to understand feature adoption and service improvements. Server logs (IP addresses, access times): up to 24 months for security monitoring and troubleshooting purposes.</li>
+      </ul>
+      <p>Usage Data is retained in accordance with the retention periods described above, and may be retained longer only where necessary for security, fraud prevention, or legal compliance.</p>
+      <p>We may retain Personal Data beyond the periods stated above for different reasons: legal obligation, legal claims, Your explicit request, or technical limitations. You may request information about how long We will retain Your Personal Data by contacting Us.</p>
+      <p>When retention periods expire, We securely delete or anonymize Personal Data. Deletion removes data from Our active systems; backup copies may remain encrypted for a limited period and are not restored except for security, disaster recovery, or legal compliance. Anonymized data may be retained indefinitely for research and analytics.</p>
+
+      <h3>Transfer of Your Personal Data</h3>
+      <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. This means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of Your jurisdiction.</p>
+      <p>Where required by applicable law, We will ensure that international transfers of Your Personal Data are subject to appropriate safeguards and, where relevant, supplementary measures. The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place, including the security of Your data and other personal information.</p>
+
+      <h3>Delete Your Personal Data</h3>
+      <p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You. Our Service may give You the ability to delete certain information about You from within the Service. You may update, amend, or delete Your information at any time by signing in to Your Account, if You have one, and visiting the account settings section that allows You to manage Your personal information. You may also contact Us to request access to, correct, or delete any Personal Data that You have provided to Us. Please note, however, that We may need to retain certain information when We have a legal obligation or lawful basis to do so.</p>
+
+      <h3>Disclosure of Your Personal Data</h3>
+      <h4>Business Transactions</h4>
+      <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
+      <h4>Law Enforcement</h4>
+      <p>Under certain circumstances, the Company may disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
+      <h4>Other Legal Requirements</h4>
+      <p>The Company may disclose Your Personal Data in the good-faith belief that such action is necessary to: comply with a legal obligation; protect and defend the rights or property of the Company; prevent or investigate possible wrongdoing in connection with the Service; protect the personal safety of Users of the Service or the public; protect against legal liability.</p>
+
+      <h3>Security of Your Personal Data</h3>
+      <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While We strive to use commercially reasonable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
+
+      <h2>Children's and Minors' Privacy</h2>
+      <p>The Service is not directed to, and We do not knowingly collect Personal Information from, anyone under the age of 16. If You are a parent or guardian and You believe Your child has provided Us with Personal Information, please contact Us. If We become aware that We have collected Personal Information from anyone under the age of 16, We will take steps to remove that information from Our servers as soon as reasonably possible.</p>
+      <p>Some countries and states set a higher age at which an individual can consent to the processing of their own Personal Information. Where We rely on consent as a legal basis and the law applicable to a User sets an age higher than 16, We may require the consent of that User's parent or guardian before We collect and use their Personal Information.</p>
+
+      <h2>Links to Other Websites</h2>
+      <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third-party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit. We have no control over and assume no responsibility for the content, privacy policies or practices of any third-party sites or services.</p>
+
+      <h2>Changes to this Privacy Policy</h2>
+      <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page. We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the &quot;Last updated&quot; date at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+
+      <h2>Contact Us</h2>
+      <p>If You have any questions about this Privacy Policy, You can contact Us:</p>
+      <ul>
+        <li>By email: bsenterpriseguyana@gmail.com</li>
+      </ul>
+    </div>
+
+    <!-- ========== CHINESE SECTION (中文) ========== -->
+    <div class="chinese-section">
+      <h1>隐私政策</h1>
+      <p class="last-updated">最后更新日期：2026年8月10日</p>
+      <p>本隐私政策说明当您使用本服务时，我们关于收集、使用和披露您信息的政策和程序，并告知您您的隐私权利以及法律如何保护您。</p>
+      <p>我们使用您的个人数据来提供和改进服务。我们按照本隐私政策所述收集、使用和披露您的信息，并且在适用法律要求的情况下，仅在具有有效法律依据（包括您的同意（如需同意））时进行。本隐私政策借助 <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">隐私政策生成器</a> 创建。</p>
+
+      <h2>解释与定义</h2>
+      <h3>解释</h3>
+      <p>首字母大写的词语具有以下条件所定义的含义。下列定义无论以单数或复数形式出现，均应具有相同含义。</p>
+      <h3>定义</h3>
+      <ul>
+        <li><strong>账户</strong> 指为您创建的用于访问我们服务或服务部分的唯一账户。</li>
+        <li><strong>关联方</strong> 指控制一方、受一方控制或与一方处于共同控制下的实体，其中“控制”指拥有50%或以上的股份、股权或其他有权选举董事或其他管理机构的证券的所有权。</li>
+        <li><strong>应用程序</strong> 指 Dual Camera Target 3X，即本公司提供的软件程序。</li>
+        <li><strong>公司</strong>（在本隐私政策中称为“公司”、“我们”、“我方”或“我们的”）指 BS Enterprise Guyana，地址为 Lot 83 Edward Street Rosignol Village West Bank Berbice。</li>
+        <li><strong>国家/州</strong> 指：圭亚那。</li>
+        <li><strong>设备</strong> 指任何可以访问服务的设备，例如计算机、手机或数字平板。</li>
+        <li><strong>个人数据</strong>（或“个人信息”）指与已识别或可识别个人相关的任何信息。除法律使用特定术语外，我们交替使用“个人数据”和“个人信息”。</li>
+        <li><strong>服务</strong> 指应用程序。</li>
+        <li><strong>服务提供商</strong> 指代表公司处理数据的任何自然人或法人。指公司雇用的第三方公司或个人，以促进服务、代表公司提供服务、执行与服务相关的服务或协助公司分析服务的使用方式。</li>
+        <li><strong>使用数据</strong> 指自动收集的数据，由使用服务或服务基础设施本身生成（例如页面访问的持续时间）。</li>
+        <li><strong>用户</strong> 指访问或使用服务的任何个人。</li>
+        <li><strong>您</strong> 指访问或使用服务的个人，或代表该个人访问或使用服务的公司或其他法律实体（如适用）。</li>
+      </ul>
+
+      <h2>收集和使用您的个人信息</h2>
+      <h3>收集的数据类型</h3>
+      <h4>个人数据</h4>
+      <p>在使用我们的服务时，我们可能会要求您向我们提供某些可用于联系或识别您的个人身份信息。个人身份信息可能包括但不限于：</p>
+      <h4>使用数据</h4>
+      <p>使用数据在使用服务时自动收集。使用数据可能包括您设备的互联网协议地址（例如IP地址）、浏览器类型、浏览器版本、您访问的服务页面、访问时间和日期、在这些页面上花费的时间、唯一设备标识符和其他诊断数据。</p>
+      <p>当您通过移动设备访问服务时，我们可能会自动收集某些信息，包括但不限于您使用的移动设备类型、移动设备唯一ID、移动设备IP地址、移动操作系统、移动互联网浏览器类型、唯一设备标识符和其他诊断数据。</p>
+      <h4>跟踪技术和Cookie</h4>
+      <p>我们使用跟踪技术（例如Cookie）来跟踪活动并改进我们的服务。我们使用的技术可能包括：</p>
+
+      <h3>使用您的个人数据</h3>
+      <p>公司可能将个人数据用于以下目的：</p>
+      <ul>
+        <li><strong>提供和维护我们的服务</strong>，包括监控服务的使用情况。</li>
+        <li><strong>管理您的账户</strong>：管理您作为服务用户的注册。您提供的个人数据可使您作为注册用户访问服务的不同功能。</li>
+        <li><strong>履行合同</strong>：开发、遵守和执行您通过服务购买的产品、项目或服务的购买合同或与我们签订的任何其他合同。</li>
+        <li><strong>联系您</strong>：通过电子邮件、电话、短信或其他等效电子通信方式（例如移动应用程序的推送通知）联系您，以提供与功能、产品或合同服务相关的更新或信息性通信，包括安全更新（在必要或合理实施时）。</li>
+        <li><strong>向您提供</strong> 与您已购买或询问过的商品、服务和活动类似的新闻、特别优惠和一般信息。我们仅在适用法律允许的情况下发送此类营销通信：如需事先同意（例如根据EEA和英国适用法律），我们仅会在您同意的情况下发送；否则，我们可能会发送直到您选择退出。您可以随时通过我们发送的任何营销电子邮件中的取消订阅链接或联系我们，选择退出或撤回同意。</li>
+        <li><strong>管理您的请求</strong>：处理和回应您的请求。</li>
+        <li><strong>业务转让</strong>：我们可能使用您的个人数据来评估或进行合并、剥离、重组、解散或其他出售或转让部分或全部资产，无论是作为持续经营还是作为破产、清算或类似程序的一部分，其中我们持有的关于服务用户的个人数据属于转让资产。</li>
+        <li><strong>其他目的</strong>：我们可能将您的信息用于其他目的，例如数据分析、识别使用趋势、确定促销活动的有效性以及评估和改进我们的服务、产品、营销和您的体验。</li>
+      </ul>
+      <p>我们可能在以下情况下共享您的个人数据：</p>
+      <ul>
+        <li><strong>与服务提供商</strong>：我们可能与服务提供商共享您的个人数据，以监控和分析服务的使用情况，并与您联系。</li>
+        <li><strong>业务转让</strong>：我们可能在与任何合并、出售公司资产、融资或收购全部或部分业务相关或谈判期间共享或转让您的个人数据。</li>
+        <li><strong>与关联方</strong>：我们可能与关联方共享您的个人数据，在这种情况下，我们将要求关联方遵守本隐私政策。关联方包括我们的母公司以及我们控制或与我们共同控制的任何其他子公司、合资伙伴或其他公司。</li>
+        <li><strong>与其他用户</strong>：如果我们的服务提供公共区域，当您在公共区域与其他用户共享个人数据或以其他方式互动时，此类信息可能被所有用户查看，并可能在服务外公开分发。</li>
+        <li><strong>经您同意</strong>：我们可能在获得您同意的情况下，为任何其他目的披露您的个人数据。</li>
+      </ul>
+
+      <h3>保留您的个人数据</h3>
+      <p>公司仅在本隐私政策所述目的所需的时间内保留您的个人数据。我们将在必要的范围内保留和使用您的个人数据，以遵守我们的法律义务（例如，如果需要保留您的数据以遵守适用法律）、解决争议和执行我们的法律协议和政策。</p>
+      <p>在可能的情况下，我们会采用较短的保留期限和/或通过删除、汇总或匿名化数据来降低可识别性。除非另有说明，以下保留期限为最长期限（“最长”），当数据不再需要用于相关目的时，我们可能会更早删除或匿名化数据。我们根据处理目的和法律义务对不同类别的个人数据应用不同的保留期限：</p>
+      <ul>
+        <li><strong>账户信息</strong> – 用户账户：在您的账户关系期间保留，并在账户关闭后最多保留24个月，以处理任何终止后问题或解决争议。</li>
+        <li><strong>使用数据</strong> – 应用程序使用统计：最长24个月，以了解功能采用情况和服务改进。服务器日志（IP地址、访问时间）：最长24个月，用于安全监控和故障排除。</li>
+      </ul>
+      <p>使用数据根据上述保留期限保留，并且仅在安全、防欺诈或法律合规需要时可能保留更长时间。</p>
+      <p>我们可能基于不同原因在超过上述期限后保留个人数据：法律义务、法律索赔、您的明确要求或技术限制。您可以通过联系我们请求了解我们将保留您的个人数据多长时间。</p>
+      <p>当保留期限届满时，我们安全地删除或匿名化个人数据。删除会从我们的活动系统中移除数据；备份副本可能在有限时间内加密保留，除非出于安全、灾难恢复或法律合规目的，否则不会恢复。匿名化数据可无限期保留用于研究和分析。</p>
+
+      <h3>传输您的个人数据</h3>
+      <p>您的信息（包括个人数据）在公司的运营办公室以及处理方所在的任何其他地点进行处理。这意味着这些信息可能被传输到并保存在您所在州、省、国家或其他政府管辖区之外的计算机上，而该地区的数据保护法律可能与您所在司法管辖区的法律不同。</p>
+      <p>在适用法律要求的情况下，我们将确保您的个人数据的国际传输受到适当保障措施以及（如相关）补充措施的约束。公司将采取一切合理必要的步骤，确保您的数据得到安全处理并符合本隐私政策，并且在未采取充分控制措施（包括您的数据和其他个人信息的安全）的情况下，不会将您的个人数据传输到组织或国家。</p>
+
+      <h3>删除您的个人数据</h3>
+      <p>您有权删除或要求我们协助删除我们收集的关于您的个人数据。我们的服务可能允许您从服务中删除某些信息。如果您有账户，您可以随时登录账户并访问允许您管理个人信息的账户设置部分来更新、修改或删除您的信息。您也可以联系我们请求访问、更正或删除您提供给我们的任何个人数据。但请注意，当我们有法律义务或合法依据时，我们可能需要保留某些信息。</p>
+
+      <h3>披露您的个人数据</h3>
+      <h4>业务交易</h4>
+      <p>如果公司涉及合并、收购或资产出售，您的个人数据可能会被转移。在您的个人数据被转移并受不同隐私政策约束之前，我们将发出通知。</p>
+      <h4>执法</h4>
+      <p>在某些情况下，如果法律要求或为回应公共机构（例如法院或政府机构）的有效请求，公司可能会披露您的个人数据。</p>
+      <h4>其他法律要求</h4>
+      <p>公司可能基于善意认为有必要披露您的个人数据，以便：遵守法律义务；保护和捍卫公司的权利或财产；防止或调查与服务相关的可能不当行为；保护服务用户或公众的人身安全；防止法律责任。</p>
+
+      <h3>个人数据的安全</h3>
+      <p>您的个人数据的安全对我们很重要，但请记住，没有任何互联网传输方法或电子存储方法是100%安全的。虽然我们努力使用商业上合理的手段来保护您的个人数据，但我们无法保证其绝对安全。</p>
+
+      <h2>儿童和未成年人隐私</h2>
+      <p>本服务不针对16岁以下任何人，我们不会有意收集16岁以下任何人的个人信息。如果您是父母或监护人，并且认为您的孩子向我们提供了个人信息，请联系我们。如果我们发现我们收集了16岁以下任何人的个人信息，我们将尽快采取步骤从服务器中删除该信息。</p>
+      <p>一些国家和州规定了个人可以同意处理其自身个人信息的更高年龄。在我们依赖同意作为法律基础且适用于用户的法律设定的年龄高于16岁时，我们可能会在收集和使用其个人信息之前要求该用户父母或监护人的同意。</p>
+
+      <h2>其他网站链接</h2>
+      <p>我们的服务可能包含非由我们运营的其他网站的链接。如果您点击第三方链接，您将被引导至该第三方网站。我们强烈建议您查看您访问的每个网站的隐私政策。我们对任何第三方网站或服务的内容、隐私政策或做法没有控制权，也不承担任何责任。</p>
+
+      <h2>本隐私政策的变更</h2>
+      <p>我们可能会不时更新我们的隐私政策。我们将通过在此页面上发布新的隐私政策来通知您任何变更。在变更生效之前，我们将通过电子邮件和/或在我们的服务上发布显著通知，并更新本隐私政策顶部的“最后更新”日期。建议您定期查看本隐私政策以了解任何变更。本隐私政策的变更在发布在此页面上时生效。</p>
+
+      <h2>联系我们</h2>
+      <p>如果您对本隐私政策有任何疑问，您可以通过以下方式联系我们：</p>
+      <ul>
+        <li>电子邮件：bsenterpriseguyana@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+  <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+    <span class="badge" style="text-align: center;"><br>Dual Camera Target 3X</span>
+    <span class="badge" style="text-align: center;">Copyright © 2026 BS Enterprise<br>Guyana, South America<br>All rights reserved </span>
+  </div>
+</div>
+
+<script>
+  // language switcher
+  function switchLang(lang) {
+    const content = document.getElementById('policyContent');
+    const btnEn = document.getElementById('btnEnglish');
+    const btnZh = document.getElementById('btnChinese');
+
+    if (lang === 'en') {
+      content.classList.remove('show-chinese');
+      btnEn.classList.add('active');
+      btnZh.classList.remove('active');
+    } else {
+      content.classList.add('show-chinese');
+      btnZh.classList.add('active');
+      btnEn.classList.remove('active');
+    }
+    // optional: scroll to top of policy
+    document.querySelector('.policy-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // set default (English active)
+  document.addEventListener('DOMContentLoaded', function() {
+    // ensure default state: english visible, chinese hidden
+    document.getElementById('policyContent').classList.remove('show-chinese');
+    document.getElementById('btnEnglish').classList.add('active');
+    document.getElementById('btnChinese').classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
